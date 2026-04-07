@@ -24,50 +24,50 @@
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    to bottom right,
+    hsl(230, 20%, 18%) 3%,
+    hsl(230, 18%, 12%) 97%
   );
   --bg-gradient-jet: linear-gradient(
-    to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    to bottom right,
+    hsla(230, 20%, 15%, 0.4) 0%,
+    hsla(230, 18%, 10%, 0) 100%
+  ), hsl(230, 18%, 11%);
   --bg-gradient-yellow-1: linear-gradient(
-    to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    to bottom right,
+    hsl(265, 90%, 65%) 0%,
+    hsla(195, 100%, 60%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    135deg,
+    hsla(265, 90%, 65%, 0.25) 0%,
+    hsla(195, 100%, 60%, 0) 59.86%
+  ), hsl(230, 18%, 11%);
   --border-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    to bottom right,
+    hsl(265, 50%, 35%) 0%,
+    hsla(195, 80%, 40%, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
-    to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    to right,
+    hsl(265, 90%, 70%),
+    hsl(195, 100%, 60%)
   );
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
+  --jet: hsl(230, 15%, 20%);
+  --onyx: hsl(230, 18%, 14%);
+  --eerie-black-1: hsl(230, 20%, 11%);
+  --eerie-black-2: hsl(230, 22%, 9%);
+  --smoky-black: hsl(230, 25%, 5%);
   --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --white-2: hsl(210, 20%, 96%);
+  --orange-yellow-crayola: hsl(265, 90%, 70%);
+  --vegas-gold: hsl(195, 100%, 60%);
+  --light-gray: hsl(210, 15%, 80%);
+  --light-gray-70: hsla(210, 15%, 80%, 0.7);
+  --bittersweet-shimmer: hsl(265, 60%, 55%);
 
   /**
    * typography
@@ -1880,3 +1880,265 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+/*-----------------------------------*\
+  #MODERN 2026 ENHANCEMENTS
+\*-----------------------------------*/
+
+/* === BODY BACKGROUND === */
+body {
+  background: radial-gradient(ellipse at 20% 50%, hsla(265, 60%, 12%, 0.8) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, hsla(195, 80%, 10%, 0.6) 0%, transparent 50%),
+              hsl(230, 25%, 5%);
+  background-attachment: fixed;
+}
+
+/* === GLASSMORPHISM CARDS === */
+.sidebar,
+article {
+  background: hsla(230, 25%, 9%, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsla(265, 60%, 50%, 0.15);
+  box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.4),
+              inset 0 1px 0 hsla(255, 100%, 100%, 0.05);
+}
+
+/* === AVATAR GLOW === */
+.avatar-box {
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px hsla(265, 90%, 65%, 0.4),
+              0 0 25px hsla(265, 90%, 65%, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.avatar-box:hover {
+  box-shadow: 0 0 0 3px hsla(265, 90%, 65%, 0.7),
+              0 0 40px hsla(265, 90%, 65%, 0.35),
+              0 0 80px hsla(195, 100%, 60%, 0.15);
+}
+
+/* === TITLE BADGE === */
+.info-content .title {
+  background: linear-gradient(135deg, hsla(265, 90%, 65%, 0.2), hsla(195, 100%, 60%, 0.15));
+  border: 1px solid hsla(265, 90%, 65%, 0.3);
+  color: hsl(265, 90%, 80%);
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* === SEPARATOR GRADIENT === */
+.separator {
+  background: linear-gradient(to right, transparent, hsla(265, 90%, 65%, 0.4), hsla(195, 100%, 60%, 0.4), transparent);
+}
+
+/* === ICON BOX GLOW === */
+.icon-box {
+  background: linear-gradient(135deg, hsla(265, 90%, 65%, 0.2), hsla(195, 100%, 60%, 0.1));
+  border: 1px solid hsla(265, 90%, 65%, 0.3);
+  box-shadow: 0 0 12px hsla(265, 90%, 65%, 0.15);
+}
+
+.icon-box::before {
+  background: linear-gradient(135deg, hsl(230, 22%, 12%), hsl(230, 20%, 10%));
+}
+
+/* === ARTICLE TITLE UNDERLINE === */
+.article-title::after {
+  background: linear-gradient(to right, hsl(265, 90%, 70%), hsl(195, 100%, 60%));
+  width: 45px;
+  height: 3px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px hsla(265, 90%, 65%, 0.5);
+}
+
+/* === SOCIAL LINKS GLOW === */
+.social-item .social-link {
+  color: hsla(265, 70%, 75%, 0.7);
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.social-item .social-link:hover {
+  color: hsl(265, 90%, 75%);
+  filter: drop-shadow(0 0 8px hsla(265, 90%, 65%, 0.7));
+  transform: translateY(-2px);
+}
+
+/* === NAVBAR MODERN === */
+.navbar {
+  background: hsla(230, 25%, 8%, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsla(265, 60%, 40%, 0.2);
+  border-bottom: none;
+}
+
+.navbar-link {
+  font-size: 13px;
+  font-weight: var(--fw-500);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: hsl(265, 90%, 80%);
+}
+
+.navbar-link.active {
+  background: linear-gradient(to right, hsl(265, 90%, 70%), hsl(195, 100%, 60%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === SERVICE ITEMS === */
+.service-item {
+  border: 1px solid hsla(265, 60%, 40%, 0.15);
+  transition: all 0.35s ease;
+  background: hsla(230, 20%, 10%, 0.5);
+}
+
+.service-item:hover {
+  border-color: hsla(265, 90%, 65%, 0.4);
+  box-shadow: 0 8px 30px hsla(265, 90%, 65%, 0.12),
+              inset 0 1px 0 hsla(265, 90%, 65%, 0.08);
+  transform: translateY(-3px);
+}
+
+/* === SKILL BARS === */
+.skill-progress-bg {
+  background: hsla(230, 20%, 18%, 1);
+  height: 6px;
+  border-radius: 10px;
+}
+
+.skill-progress-fill {
+  background: linear-gradient(to right, hsl(265, 90%, 65%), hsl(195, 100%, 60%));
+  height: 100%;
+  border-radius: inherit;
+  box-shadow: 0 0 10px hsla(265, 90%, 65%, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, hsla(255, 100%, 100%, 0.3), transparent);
+  animation: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+  100% { left: 200%; }
+}
+
+/* === TIMELINE DOTS === */
+.timeline-item::after {
+  background: linear-gradient(135deg, hsl(265, 90%, 70%), hsl(195, 100%, 60%));
+  box-shadow: 0 0 8px hsla(265, 90%, 65%, 0.6);
+}
+
+.timeline-list span {
+  background: linear-gradient(to right, hsl(265, 90%, 75%), hsl(195, 100%, 65%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === PROJECT ITEMS HOVER === */
+.project-item > a:hover .project-item-icon-box {
+  background: linear-gradient(135deg, hsla(265, 90%, 40%, 0.9), hsla(195, 100%, 30%, 0.9));
+  color: white;
+  box-shadow: 0 0 20px hsla(265, 90%, 65%, 0.4);
+}
+
+/* === FORM INPUTS === */
+.form-input {
+  background: hsla(230, 20%, 10%, 0.6);
+  border: 1px solid hsla(265, 60%, 40%, 0.2);
+  color: var(--white-2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: hsla(265, 90%, 65%, 0.6);
+  box-shadow: 0 0 0 3px hsla(265, 90%, 65%, 0.1),
+              0 0 20px hsla(265, 90%, 65%, 0.1);
+}
+
+/* === FORM BUTTON === */
+.form-btn {
+  background: linear-gradient(135deg, hsl(265, 90%, 55%), hsl(195, 100%, 45%));
+  color: white;
+  border: none;
+  font-weight: var(--fw-500);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.form-btn::before { display: none; }
+
+.form-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, hsl(265, 90%, 65%), hsl(195, 100%, 55%));
+  box-shadow: 0 8px 25px hsla(265, 90%, 65%, 0.4);
+  transform: translateY(-2px);
+}
+
+/* === INFO MORE BTN === */
+.info_more-btn {
+  background: linear-gradient(135deg, hsla(265, 90%, 65%, 0.2), hsla(195, 100%, 60%, 0.1));
+  border: 1px solid hsla(265, 90%, 65%, 0.3);
+  color: hsl(265, 90%, 75%);
+}
+
+.info_more-btn::before { display: none; }
+
+.info_more-btn:hover {
+  background: linear-gradient(135deg, hsla(265, 90%, 65%, 0.35), hsla(195, 100%, 60%, 0.25));
+  box-shadow: 0 0 20px hsla(265, 90%, 65%, 0.3);
+}
+
+/* === CONTACT INFO LINKS === */
+.contact-info .contact-link:hover {
+  color: hsl(265, 90%, 75%);
+}
+
+/* === FILTER BUTTONS === */
+.filter-item button.active {
+  background: linear-gradient(to right, hsl(265, 90%, 70%), hsl(195, 100%, 60%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === CONTENT CARD === */
+.content-card {
+  background: hsla(230, 20%, 10%, 0.6);
+  border: 1px solid hsla(265, 60%, 40%, 0.15);
+}
+
+.content-card::before {
+  background: linear-gradient(135deg, hsl(230, 22%, 13%), hsl(230, 20%, 11%));
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: hsl(230, 25%, 6%); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(hsl(265, 90%, 55%), hsl(195, 100%, 45%));
+  border-radius: 6px;
+}
+
+/* === SELECTION === */
+::selection {
+  background: hsla(265, 90%, 65%, 0.4);
+  color: white;
+}
+
+:focus { outline-color: hsla(265, 90%, 65%, 0.6); }
